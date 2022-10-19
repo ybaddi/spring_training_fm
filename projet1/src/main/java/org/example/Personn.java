@@ -15,7 +15,7 @@ public class Personn {
 
     public IMiseEnForm iMiseEnForm_2 = () -> {System.out.println("hello from affichage personn");};
 
-    public ICalcule iCalcul = ( x, y) -> {System.out.println(x+y);};
+    public ICalcule iCalcul = ( x, y) -> x+y;
 
     public Personn(String nom, String prenom, int age) {
         this.nom = nom;
@@ -54,5 +54,9 @@ public class Personn {
                 ", prenom='" + prenom + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+    void calcule(int ... x){
+
     }
 }
