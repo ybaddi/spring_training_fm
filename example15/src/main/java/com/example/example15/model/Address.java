@@ -1,11 +1,10 @@
 package com.example.example15.model;
 
 import lombok.*;
+import org.springframework.data.rest.core.annotation.RestResource;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Entity
@@ -24,4 +23,9 @@ public class Address {
     private String rue;
     @NonNull
     private String codePostal;
+
+
+    @RestResource(exported = true)
+    @ManyToMany(mappedBy = "addresses")
+    private List<Personne> personne;
 }
