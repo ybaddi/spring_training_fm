@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -859,15 +862,17 @@
                             </div>
                             <!-- /.card-header -->
                             <!-- form start -->
-                            <form action="/personne/add" method="post">
+                            <form:form action="/personne/add" method="post" modelAttribute="personne">
                                 <div class="card-body">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1">Nom</label>
-                                        <input type="text" name="nom" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                        <form:label path="exampleInputEmail1">Nom</form:label>
+                                        <form:input type="text" path="nom" class="form-control"
+                                                    id="exampleInputEmail1" placeholder="Enter email"/>
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputPassword1">Prenom</label>
-                                        <input type="text" name="prenom" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                        <form:label path="exampleInputPassword1">Prenom</form:label>
+                                        <form:input type="text" path="prenom" class="form-control"
+                                                    id="exampleInputPassword1" placeholder="Password" />
                                     </div>
 
 
@@ -875,9 +880,9 @@
                                 <!-- /.card-body -->
 
                                 <div class="card-footer">
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary" >Submit</button>
                                 </div>
-                            </form>
+                            </form:form>
                         </div>
                         <!-- /.card -->
 

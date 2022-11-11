@@ -2,9 +2,10 @@ package com.example.example15.model;
 
 import lombok.*;
 
-
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Data
 @Entity
@@ -12,17 +13,15 @@ import java.util.List;
 @NoArgsConstructor
 @ToString
 @RequiredArgsConstructor
-public class Personne {
+public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
     @NonNull
-    private String nom;
+    private String vile;
     @NonNull
-    private String prenom;
-
+    private String rue;
     @NonNull
-    @ManyToMany(cascade = CascadeType.ALL)
-    private List<Address> addresses;
+    private String codePostal;
 }
