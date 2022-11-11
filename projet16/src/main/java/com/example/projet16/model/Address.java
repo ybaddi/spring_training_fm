@@ -1,27 +1,27 @@
 package com.example.projet16.model;
 
-import lombok.*;
+//import lombok.*;
 import org.springframework.data.rest.core.annotation.RestResource;
 
 import javax.persistence.*;
 import java.util.List;
 
-@Data
+//@Data
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@RequiredArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@ToString
+//@RequiredArgsConstructor
 public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-    @NonNull
+//    @NonNull
     private String vile;
-    @NonNull
+//    @NonNull
     private String rue;
-    @NonNull
+//    @NonNull
     private String codePostal;
 
 
